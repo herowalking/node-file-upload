@@ -18,6 +18,15 @@ function start(route, handle) {
                 postData += posDataChunk;
                 console.log("Received POST data chunk " + postData);
             });
+            request.addListener("end", function () {
+                route(handle, pathname, response, postData);
+            });
         }
     }
+
+    http.createServer(onRequest).listen(8090, function(){
+        console.log("Server is starting on port 8090.");
+    });
 }
+
+exports.start = start;

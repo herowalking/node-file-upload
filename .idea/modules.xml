@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../node-file-upload/.idea/node-fileupload.iml" filepath="$PROJECT_DIR$/../node-file-upload/.idea/node-fileupload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/node-file-upload.iml" filepath="$PROJECT_DIR$/.idea/node-file-upload.iml" />
+      <module fileurl="file://D:\workspace\git\node-file-upload\.idea\node-fileupload.iml" filepath="D:\workspace\git\node-file-upload\.idea\node-fileupload.iml" />
     </modules>
   </component>
 </project>
