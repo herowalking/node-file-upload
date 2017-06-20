@@ -6,9 +6,10 @@ var http = require('http');
 var url = require('url');
 
 function start(route, handle) {
-
+    console.log(route);
     function onRequest(request, response) {
         var pathname = url.parse(request.url).pathname;
+        console.log("pathname: ", pathname);
         if(pathname === '/favicon.ico') {
 
         } else {
@@ -20,6 +21,7 @@ function start(route, handle) {
     http.createServer(onRequest).listen(8090, function(){
         console.log("Server is starting on port 8090.");
     });
+
 }
 
 exports.start = start;

@@ -4,12 +4,13 @@
 
 var fs = require('fs');
 var formidable = require('formidable');
-var util = require('util');
+// var util = require('util');
 
 function upload(response, request) {
+    console.log(request.method);
     if(request.method.toLowerCase() === 'get') {
         response.writeHead(404, {'Content-Type':'text/plain'});
-        response.write("404 Not found.");
+        response.write("404 Not found again.");
         response.end();
     } else {
         console.log("Request handler 'upload' was called.");
