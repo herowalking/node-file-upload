@@ -13,17 +13,21 @@ function start(response) {
     // sleep(10000);
 
     var content = "empty";
-    exec('ipconfig', {encoding: 'Hero'}, function (error, stdout, stderr) {
+    // exec('ipconfig', {encoding: 'Hero'}, function (error, stdout, stderr) {
+    exec('ipconfig /all', {encoding: 'Hero'}, function (error, stdout, stderr) {
         if(error) {
             console.log(error);
         } else {
             content = stdout || stderr;
-            console.log(content);
+            console.log(content + '....');
         }
+
+        response.writeHead(200, {'Content-Type':'text/plain'});
+        // response.writeHead(200, {'Content-Type':'text/html'});
+        response.write(content);
+        response.end();
     });
-    response.writeHead(200, {'Content-Type':'text/plain'});
-    response.write(content);
-    response.end();
+
 }
 
 function upload(response) {

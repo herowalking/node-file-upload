@@ -4,8 +4,8 @@
 
 var server = require('./server');
 var router = require('./router');
-// var requestHandlers = require('./requestHandlers');
-var requestHandlers = require('./postHandlers');
+var requestHandlers = require('./requestHandlers');
+// var requestHandlers = require('./postHandlers');
 
 var handle = {};
 handle['/'] = requestHandlers.start;
