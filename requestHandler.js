@@ -9,7 +9,7 @@ var showHandler = require('./showHandler');
 var handle = {};
 handle['/'] = startHandler.start;
 handle['/start'] = startHandler.start;
-handle['/upload'] = startHandler.upload;
-handle['/show'] = startHandler.show;
+handle['/upload'] = uploadHandler.upload;
+handle['/show'] = showHandler.show;
 
 exports.handle = handle;
