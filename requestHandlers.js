@@ -19,7 +19,7 @@ function start(response) {
             console.log(error);
         } else {
             content = stdout || stderr;
-            console.log(content + '....');
+            // console.log(content + '....');
         }
 
         response.writeHead(200, {'Content-Type':'text/plain'});
